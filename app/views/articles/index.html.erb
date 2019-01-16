@@ -1,0 +1,31 @@
+<h1>Listing all Articles </h1>
+
+<% if @articles.empty? %>
+
+ <h1> oops no articles pa </h1>
+	<%end%>
+
+
+<%= link_to 'create new article',new_article_path %>
+
+
+
+<% @articles.each do |a|%>
+<ul>
+<li>
+
+<p>
+
+Title :	<%= a.title %> <br>
+Description : <%= a.description %> <br>
+<%= link_to 'edit',edit_article_path(a) %>
+
+<%= link_to 'show',article_path(a) %>
+<br>
+
+
+</p>
+
+</li>
+</ul>
+<% end %>	
