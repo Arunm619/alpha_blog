@@ -1,15 +1,4 @@
-<%if @article.errors.any? %>
-
-<h2> The following errors prevented from craeting the article.</h2>
-<ul>
-<% @article.errors.full_messages.each do |msg|%>
-
-	<li> 
-		<%=msg%></li>
-</ul>
-<%end%>
-<%end%>
-
+<%= render 'shared/errors' %>
 
 <%= form_for @article do |f|%>
 <p>
@@ -31,4 +20,4 @@
 
 	<% end %>
 
-<%= link_to 'back to all articles' , articles_path%>	
+<%= link_to 'Cancel request back to all articles' , articles_path%>	
