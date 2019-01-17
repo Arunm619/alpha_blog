@@ -1,0 +1,25 @@
+$navbar-default-bg: #01579B;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+#logo{
+	text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.center{
+	text-align: center;
+}
+
+.jumbotron{
+	background-image : asset_url('wolve.jpeg');
+	background-size : cover ;
+	height : 550px;
+}
+
+footer{
+	margin-top : 45px;
+	padding-top : 5px;
+	border-top : 1px solid #eaeaea;
+	color : #777; 
+}
