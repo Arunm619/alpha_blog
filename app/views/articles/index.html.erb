@@ -2,7 +2,7 @@
 
 <% if @articles.empty? %>
 
- <h1> oops no articles pa </h1>
+ <h1> oops no articles </h1>
 	<%end%>
 
 
@@ -18,6 +18,9 @@
 
 Title :	<%= a.title %> <br>
 Description : <%= a.description %> <br>
+
+Created By : <%= a.user.username if a.user %>  , <%=   time_ago_in_words(a.created_at ) %>  last updated at  <%= time_ago_in_words(a.updated_at)  %>>
+
 <%= link_to 'edit',edit_article_path(a) %>
 ||
 <%= link_to 'show',article_path(a) %>
